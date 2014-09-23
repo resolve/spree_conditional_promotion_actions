@@ -1,4 +1,29 @@
-spree_conditional_promotion_actions
-===================================
+# SpreeConditionalPromotionActions
 
-A parent class and examples for Spree promotion actions that activate different methods when eligible and ineligible. A typical use case would be to add a promotional item to the cart if an order is eligible and remove it again if the order changes to become ineligible.
+TODO: Write a gem description
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+    gem 'spree_conditional_promotion_actions'
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install spree_conditional_promotion_actions
+
+## Usage
+
+TODO: Write usage instructions here
+
+## Contributing
+
+1. Fork it ( https://github.com/[my-github-username]/spree_conditional_promotion_actions/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
