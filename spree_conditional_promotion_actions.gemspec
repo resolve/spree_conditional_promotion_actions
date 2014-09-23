@@ -1,24 +1,31 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'spree_conditional_promotion_actions/version'
+# encoding: UTF-8
+Gem::Specification.new do |s|
+  s.platform    = Gem::Platform::RUBY
+  s.name        = 'spree_conditional_promotion_actions'
+  s.version     = '0.0.1'
+  s.summary     = 'A parent class and examples for Spree promotion actions that activate different methods when eligible and ineligible. A typical use case would be to add a promotional item to the cart if an order is eligible and remove it again if the order changes to become ineligible.'
+  s.description = 'A parent class and examples for Spree promotion actions that activate different methods when eligible and ineligible. A typical use case would be to add a promotional item to the cart if an order is eligible and remove it again if the order changes to become ineligible.'
+  s.required_ruby_version = '>= 1.9.3'
 
-Gem::Specification.new do |spec|
-  spec.name          = "spree_conditional_promotion_actions"
-  spec.version       = SpreeConditionalPromotionActions::VERSION
-  spec.authors       = ["Isaac Freeman"]
-  spec.email         = ["isaac@resolvedigital.co.nz"]
-  spec.summary       = %q{A parent class and examples for Spree promotion actions that activate different methods when eligible and ineligible. A typical use case would be to add a promotional item to the cart if an order is eligible and remove it again if the order changes to become ineligible.}
-  spec.description   = %q{A parent class and examples for Spree promotion actions that activate different methods when eligible and ineligible. A typical use case would be to add a promotional item to the cart if an order is eligible and remove it again if the order changes to become ineligible.}
-  spec.homepage      = ""
-  spec.license       = "MIT"
+  s.author    = 'Isaac Freeman'
+  s.email     = 'isaac@resolvedigital.co.nz'
+  s.homepage  = 'http://resolve.digital'
 
-  spec.files         = `git ls-files -z`.split("\x0")
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
+  #s.files       = `git ls-files`.split("\n")
+  #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.require_path = 'lib'
+  s.requirements << 'none'
 
-  spec.add_development_dependency "bundler", "~> 1.6"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency 'minitest'
+  s.add_dependency 'spree_core', '~> 2.2.5'
+
+  s.add_development_dependency 'capybara', '~> 2.4'
+  s.add_development_dependency 'coffee-rails'
+  s.add_development_dependency 'database_cleaner'
+  s.add_development_dependency 'factory_girl', '~> 4.4'
+  s.add_development_dependency 'ffaker'
+  s.add_development_dependency 'rspec-rails',  '~> 3.1'
+  s.add_development_dependency 'sass-rails', '~> 4.0.2'
+  s.add_development_dependency 'selenium-webdriver'
+  s.add_development_dependency 'simplecov'
+  s.add_development_dependency 'sqlite3'
 end
