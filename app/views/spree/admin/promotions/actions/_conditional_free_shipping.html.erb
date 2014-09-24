@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="field alpha omega eight columns">
+    If the customer's order includes...
+  </div>
+</div>
+
+<div class="row">
+  <div class="field alpha four columns products_rule_products">
+    <%= label_tag "#{param_prefix}_product_ids_string", Spree.t('add_or_remove_line_item_adjustments_action.choose_product') %>
+    <%= hidden_field_tag "#{param_prefix}[preferred_product_id]", promotion_action.preferred_product_id, :class => "product_picker_single fullwidth" %>
+  </div>
+  <div class="field omega four columns">
+    <%= label_tag "#{param_prefix}_quantity_string", Spree.t('add_or_remove_line_item_adjustments_action.quantity') %>
+    <%= number_field_tag "#{param_prefix}[preferred_quantity]", promotion_action.preferred_quantity, :min => 1, :class => 'fullwidth' %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="field alpha omega eight columns">
+    Then apply free shipping.
+  </div>
+</div>
